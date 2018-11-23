@@ -85,6 +85,12 @@ public class CatalogActivity extends AppCompatActivity {
         return true;
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        displayDatabaseInfo();
+    }
+
     private void insertPet(){
         SQLiteDatabase db = mDbHelper.getWritableDatabase();
 
