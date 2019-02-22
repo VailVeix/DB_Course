@@ -86,7 +86,6 @@ public class CatalogActivity extends AppCompatActivity {
                 null,
                 null,
                 null);
-        )
 
         try {
             // Display the number of rows in the Cursor (which reflects the number of rows in the
