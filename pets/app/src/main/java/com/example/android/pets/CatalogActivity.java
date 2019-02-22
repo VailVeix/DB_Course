@@ -29,6 +29,7 @@ import android.widget.TextView;
 
 import com.example.android.pets.data.PetContract.PetEntry;
 import com.example.android.pets.data.PetDbHelper;
+import com.example.android.pets.data.PetContract.PetEntry;
 //import com.example.android.pets.data.PetDbHelper;
 
 /**
@@ -70,14 +71,22 @@ public class CatalogActivity extends AppCompatActivity {
                 PetEntry.COLUMN_PET_WEIGHT
         };
 
-        Cursor cursor = db.query(
+        /*Cursor cursor = db.query(
                 PetEntry.TABLE_NAME,
                 project,
                 null,
                 null,
                 null,
                 null,
+                null);*/
+
+        Cursor cursor = getContentResolver().query(
+                PetEntry.CONETNT_URI,
+                project,
+                null,
+                null,
                 null);
+        )
 
         try {
             // Display the number of rows in the Cursor (which reflects the number of rows in the
